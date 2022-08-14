@@ -1,0 +1,17 @@
+<section class="container-cambiaContra">
+    <article class="contain-cambiaContra">
+        <input [(ngModel)]="contras.passAniguo" type="text" placeholder="Contraseña Antigua">
+        <input [(ngModel)]="contras.passNuevo" type="text" placeholder="Contraseña Nueva">
+        <button (click)="cambia()">Cambiar Contraseña</button>
+    </article>
+    <div class="respuesta-contacto" [ngClass]="{'respuesta-check':flagCheck&&flagRespuesta,'respuesta-exis':!flagCheck&&flagRespuesta}">
+        <p *ngIf="flagCheck; else error">
+          <i class="fa-solid fa-check"></i> Informaci&oacute;n enviada satisfactoriamente.
+        </p>
+        <ng-template #error>
+          <p>
+            <i class="fa-solid fa-xmark"></i> Ocurri&oacute; un error, int&eacute;ntelo m&aacute;s tarde.
+          </p>
+        </ng-template>
+      </div>
+</section>

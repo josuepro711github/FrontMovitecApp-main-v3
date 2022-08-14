@@ -1,0 +1,35 @@
+<ul class="alert alert-danger list_errors" *ngIf="errores!.length > 0">
+    <li *ngFor="let err of errores">
+        {{ err }}
+    </li>
+</ul>
+
+<div class="container py-2">
+
+    <div class="card bg-dark text-white">
+
+        <h5 class="card-header">Formulario de planes</h5>
+        <div class="card-body px-3 py-3">
+            <form #usuarioForm="ngForm" (submit)="enviarNuevoPlanes()">    
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Precio</label>      
+                    <div class="col-sm-6">
+                        <input name="precio" [(ngModel)]="nuevoPlanes.precioPlan" type="number" class="form-control"/> 
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Velocidad</label>
+                    <div class="col-sm-6">
+                        <input name="velocidad" [(ngModel)]="nuevoPlanes.velocidadPlan" type="number" class="form-control"/> 
+                    </div>
+                </div>
+                <div class="form-group row mb-3 form_crear">
+                    <div class="col-sm-6">  
+                        <input type="submit" value="Crear Plan" class="btn btn-secondary"/>
+                    </div>
+                </div>
+            </form>
+           
+        </div>
+    </div>
+</div>

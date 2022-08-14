@@ -1,0 +1,46 @@
+<div class="container py-2">
+
+    <div class="card bg-dark text-white">
+
+        <h5 class="card-header">Formulario de Equipos</h5>
+        <div class="card-body px-3 py-3">
+            <form [formGroup]="formEquipo">    
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Marca</label>      
+                    <div class="col-sm-6">
+                        <input formControlName="equipo" [(ngModel)]="editEquipo.marcaEquipo" type="text" class="form-control"/> 
+                        <div *ngIf="formEquipo.controls['equipo'].invalid && (formEquipo.controls['equipo'].touched || formEquipo.controls['equipo'].dirty)" class="error">
+                            <small *ngIf="formEquipo.controls['equipo'].errors?.['required']">
+                              El campo es requerido
+                            </small>
+                            <small *ngIf="formEquipo.controls['equipo'].errors?.['minlength']">
+                              El campo tiene que ser mayor a 2 dígitos
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Modelo</label>
+                    <div class="col-sm-6">
+                        <input formControlName="modelo" [(ngModel)]="editEquipo.modeloEquipo" type="text" class="form-control"/>
+                        <div *ngIf="formEquipo.controls['modelo'].invalid && (formEquipo.controls['modelo'].touched || formEquipo.controls['modelo'].dirty)" class="error">
+                            <small *ngIf="formEquipo.controls['modelo'].errors?.['required']">
+                              El campo es requerido
+                            </small>
+                            <small *ngIf="formEquipo.controls['modelo'].errors?.['minlength']">
+                              El campo tiene que ser mayor a 2 dígitos
+                            </small>
+                        </div> 
+                    </div>
+                </div>
+                <div class="form-group row mb-3 form_editar">
+                    <div class="col-sm-6">  
+                        <input (click)="editarEquipo()" type="submit" value="Editar Equipo" class="btn btn-secondary"/>
+                    </div>
+                </div>
+            </form>
+           
+        </div>
+    </div>
+</div>
+

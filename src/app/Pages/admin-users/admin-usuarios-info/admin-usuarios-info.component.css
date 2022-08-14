@@ -1,0 +1,21 @@
+.items{
+    display: flex;
+}
+
+.items .list-group{
+    margin-right: 10px;
+}
+
+.list-group b{
+    color: #444343;
+}
+
+.list-group li{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.8rem;
+}
+
+.card-title a:hover{
+    background-color: #F3ECEC;
+    border-color: #F3ECEC;
+}

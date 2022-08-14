@@ -1,0 +1,49 @@
+<div class="container py-2">
+    <div class="card bg-light">
+      <h5 class="card-header">Listado de Empleados</h5>
+  
+      <div class="card-body">
+  
+        <div class="card-title">
+          <a routerLink="../empleados-add" class="btn btn-primary me-3">AGREGAR</a>
+        </div>
+  
+        <table class="table table-striped t_font mt-3 table-hover">
+          <thead class="table table-dark">
+            <tr>
+              <th>Nombre</th>
+              <th>Apellidos</th>
+              <th>Dirreci&oacute;n</th>
+              <th>Tel&eacute;fono</th>
+              <th>Correo</th>
+              <th>C&oacute;digo</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of empleados; index as i">
+              <td>{{ item.nombreEmpleado }}</td>
+              <td>{{ item.apellidosEmpleado }}</td>
+              <td>{{ item.telefonoEmpleado }}</td>
+              <td>{{ item.direccionEmpleado }}</td>
+              <td>{{ item.correoEmpleado }}</td>
+              <td>{{ item.codigoEmpleado }}</td>
+              <td>
+                <a (click)="loadEmpleado(i)" routerLink="../empleados-edit" class="btn btn-primary btn-sm"
+                  ><i class="fa-solid fa-pen-to-square col text-center"></i
+                ></a>
+              </td>
+              <td>
+                <a (click)="showModalEliminar(item.idEmpleado)" class="btn btn-danger btn-sm"
+                  ><i class="fa-solid fa-trash"></i
+                ></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+

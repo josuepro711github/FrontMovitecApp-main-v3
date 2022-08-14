@@ -1,0 +1,72 @@
+.menu-lista-item{
+    list-style: none;
+    height: 100vh;
+    padding: 0;
+}
+
+.usuario{
+    color: white;   
+    font-style: bold;
+    text-align: center;
+    background-image: url("../../../assets/img/paisaje.jpg");
+}
+
+.menu-item-subtitle{
+    text-decoration: none;
+    display: block;
+    color: #b0bec5;
+    padding: 10px 20px;
+    line-height: 10px;
+    font-weight: 500;
+}
+
+
+
+.img-usuario{
+    width: 100%;
+    height: 100px;
+}
+
+.usuario img{
+    width: 90px;
+    margin-top: 10px;
+}
+
+.inicio:active{
+    position: relative;
+    background-color: #2196F3;
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .pointer{
+        cursor: pointer;
+    }
+    .menu-item{
+        display: flex;
+    }
+    .inicio li, .mis_recibos li, .utilidades li, .salir li{
+        margin-left: 15px;
+    }
+    .menu-item svg{
+        margin-top: 5px;
+        font-size: 25px;
+        color: #b0bec5;
+    }
+    .menu-item svg:hover{
+        color: white;
+    }
+    .menu-item a{
+        text-decoration: none;
+        display: block;
+        color: #b0bec5;
+        padding: 10px;  
+        line-height: 20px;
+        font-weight: 500;
+        font-size: 25px;
+    }
+    .menu-item a:hover{
+        color: white;
+    }
+}

@@ -1,0 +1,72 @@
+
+
+
+/** RESPONSIVE TABLET **/
+@media only screen and (min-width: 768px) {
+    .card{
+        width: 110%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card{
+        width: 100%;
+    }
+    .t_font th{
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: sans-serif;
+    }
+    
+    .t_font td{
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: sans-serif;
+    }
+}
+
+
+/** Responsive dispositivos pequeños **/
+@media (max-width:992){
+    .card{
+        width: 120%;
+    }
+    .t_font th{
+        font-size: 0rem;
+    }
+    
+    .t_font td{
+        font-size: 2px;
+        font-weight: normal;
+    }
+}
+@media (max-width:768px){
+    table{
+        width: 100%;
+    }
+    table tr{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+    table td[data-titulo]{
+        display: flex;
+    }
+    table td[data-titulo]::before{
+        content: attr( data-titulo );
+        width: 95px;
+        font-weight: bold;
+    }
+    table thead{
+        display: none;
+    }
+
+    table .boton{
+        display: inline-block;
+    }
+}

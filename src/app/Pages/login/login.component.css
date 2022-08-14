@@ -1,0 +1,80 @@
+main{
+  min-height: calc(100vh - 190px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.login-container{
+  display: flex;
+  max-width: 400px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color:rgba(5, 15, 32, 0.801);
+  padding: 20px 50px;
+  border-radius: 10px;
+  align-items: flex-start;
+}
+
+.login-container form > *{
+  font-size: 25px;
+  width: 100%;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+form input:not(:last-child){
+  outline: none;
+  border: none;
+  background: none;
+  border-bottom: solid 2px rgb(224, 224, 224);
+  transition: border-bottom 0.5s;
+  caret-color: white;
+}form input:not(:last-child):focus{
+  border-bottom: solid 2px #2095EB;
+}form input:not(:last-child)::placeholder{
+  color: #ddd;
+}form input:last-child{
+  background-color: #2095EB;
+  padding: 3px 20px;
+  border-radius: 4px;
+}form input:last-child:hover{
+  background-color: #45a8ee;
+}
+main section form label{
+  font-size: 20px;
+}
+.login-container img{
+  width: 100%;
+  padding: 3px 20px;
+  background-color: #fff;
+  margin: 20px ;
+  box-shadow: inset 0 0 5px 1px rgba(5, 15, 32, 0.801);
+  border-radius: 5px;
+  align-self: center;
+}
+
+section form .login-error{
+  color: tomato;
+  font-size: 20px;
+}
+
+@media screen and (max-width:700px){
+  main{
+    min-height: calc(100vh - 305px);
+    height: calc(100vh - 305px);
+  }
+}
+
+@media screen and (max-width:500px){
+  .main{
+    padding: 0;
+  }
+  .login-container{
+    height: 100%;
+    max-width: initial;
+    border-radius: 0;
+    padding: 3px 10px;
+  }
+}

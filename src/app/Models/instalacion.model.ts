@@ -1,0 +1,32 @@
+export interface InstalacionDTO{
+    id:number,
+	equipo:{
+        id:number,
+        marca:string,
+        modelo:string
+    },
+    usuario:{
+        id:number,
+        nombre:string,
+        apellido:string,
+        email:string,
+        documento:string
+    },
+	fecha:any,
+	serie:string,
+    direccion:string,
+	empleado:{
+        id:number,
+        nombre:string,
+        apellidos:string,
+        telefono:string,
+        direccion:string,
+        correo:string,
+        codigo:string
+    },
+	plan:{
+        id:number,	
+        velocidad:number,
+        precio:number
+    }
+}

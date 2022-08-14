@@ -1,0 +1,113 @@
+.contenedor{
+    padding-left: 20px;
+}
+.recibos-container{
+    position: relative;
+}
+.bg-recibos{
+    background-image: url('../../../assets/img/banner-recibos.png');
+    filter: brightness(65%);
+    background-size: cover;
+    height: 250px;
+    border-radius: 50px;
+    position: relative;
+}
+.recibos-container .contenido{
+    position: absolute;
+    top: 32%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.puntos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.puntos >div{
+    background: #00B4EA;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%; 
+    margin-left: 0.50rem;
+    margin-right: 0.50rem;
+}
+.recibos-container .contenido h1{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+/** contrato **/
+.contrato{
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 18%;
+    grid-template-areas: "seleccione info";
+    
+}
+.contrato .seleccione{
+    font-size: 17px;
+    background: linear-gradient(73deg, #22282d , #434f59 );
+    color: white;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.475rem 0 0 0.475rem;
+}
+.contrato .info{
+    font-size: 17px;
+    background: white;
+    height: 55px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0.975rem 0.975rem 0;
+}
+
+/** recibo **/
+.recibo{
+    display: grid;
+    margin-top: 20px;
+    gap: 20px;
+    grid-template-columns: 13% 10% 20% 10%;
+    grid-template-areas: "mes estado vencimiento monto";
+}
+.recibo .mes,
+.recibo .estado,
+.recibo .vencimiento,
+.recibo .monto{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.recibo .mes{
+    background: linear-gradient(73deg, #1ca2ca, #00B4EA);
+    color: white;
+    cursor: pointer;
+}
+.recibo .mes >div{
+    font-size: 17px;
+}
+.recibo .mes svg{
+    padding-right: 10px;
+    font-size: 1.5rem;
+}
+.recibo .estado{
+    font-size: 17px;
+    background: linear-gradient(73deg, #c1c1c1 , #d1cbcb );
+    color: white;
+    cursor: pointer;
+}
+.recibo .vencimiento,
+.recibo .monto{
+    background: white;
+    color: #7e8299;
+    cursor: pointer;
+    font-size: 17px;
+}

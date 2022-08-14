@@ -1,0 +1,106 @@
+
+
+.menu-admin{
+    display: none;
+}
+
+/** RESPONSIVE TABLET **/
+@media only screen and (min-width: 768px) {
+    .menu-admin ul{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .menu-admin ul li img{
+        display: none;
+    }
+    .menu-admin{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .menu_lista-admin{
+        display: flex;
+    }
+    .menu-item{
+        border: 1px solid skyblue;
+        display: block;
+        justify-content: center;
+    }
+    .menu-item a{
+        display: flex;
+        text-decoration: none;
+        color: rgb(98, 98, 245);
+        padding: 50px 28px;
+        text-align: center;   
+    }
+    .menu-item a:hover{
+        background-color: rgb(218, 205, 253);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .menu-admin ul{
+        padding-left: 5.5rem;
+        padding-right: 2rem;
+    }
+    .menu-admin ul li img{
+        display: block;
+    }
+    .menu-admin{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .menu_lista-admin{
+        display: flex;
+    }
+    .menu-item{
+        border: 1px solid skyblue;
+        display: block;
+        justify-content: center;
+    }
+    .menu-item a{
+        display: flex;
+        text-decoration: none;
+        color: rgb(98, 98, 245);
+        padding: 50px 47px;
+        text-align: center;   
+    }
+    .menu-item a:hover{
+        background-color: rgb(218, 205, 253);
+    }
+}
+
+/** Responsive para Desktops **/
+@media only screen and (min-width: 1200px) {
+    .menu-admin ul{
+        padding-left: 2rem;
+        padding-right: 0rem;
+    }
+    .menu-admin{
+        margin-top: 0px;
+        display: block;
+    }
+    .menu_lista-admin{
+        display: block;
+    }
+    .menu-item{
+        border: 1px solid skyblue;
+        display: flex;
+        justify-content: center;
+    }   
+    .menu-item a{
+        display: block;
+        text-decoration: none;
+        color: rgb(98, 98, 245);
+        padding: 20px 50px;
+        width: 100%;
+        text-align: center;
+    }   
+}
+
+@media (max-width: 480px){
+    .menu-admin{
+        display: none;
+    }
+}

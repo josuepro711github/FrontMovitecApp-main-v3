@@ -1,0 +1,43 @@
+
+
+.body-admin{
+    width: 100%;
+}
+
+/** RESPONSIVE TABLET **/
+@media only screen and (min-width: 768px) {
+    .body-admin{
+        width: 100%;
+        margin: 5px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .menu-admin{
+        width: 90%;
+        margin: 20px;
+    }
+}
+
+/** Responsive para Desktops **/
+@media only screen and (min-width: 1200px) {
+    .container-admin{
+        display: flex;
+    }
+    .menu-admin{
+        width: 25%;
+        margin: 20px;
+    }
+    .body-admin{
+        width: 75%;
+        margin: 20px;
+    }
+}
+
+/** Responsive dispositivos pequeños **/
+@media (max-width: 480px){
+    .body-admin{
+        width: 90%;
+        margin-left: 10px;
+    }
+}

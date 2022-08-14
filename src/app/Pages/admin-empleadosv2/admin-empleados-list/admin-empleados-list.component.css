@@ -1,0 +1,11 @@
+.t_font th{
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.t_font td{
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: sans-serif;
+}

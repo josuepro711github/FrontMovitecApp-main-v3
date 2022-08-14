@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Markazi Text', serif;
+  font-size: 18px;
+}
+
+@font-face {
+  font-family: silka-medium;
+  src: url(assets/font/silka-medium-webfont.ttf) format("opentype");
+}
+@font-face {
+  font-family: silka-bold;
+  src: url(assets/font/silka-bold-webfont.ttf) format("opentype");
+}
+
+*{
+  font-family: 'silka-medium';
+}
+.silka-medium{
+  font-family: 'silka-medium';
+}
+.silka-bold{
+  font-family: 'silka-bold';
+}

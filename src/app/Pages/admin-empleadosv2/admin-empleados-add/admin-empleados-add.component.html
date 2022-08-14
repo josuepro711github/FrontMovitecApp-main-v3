@@ -1,0 +1,99 @@
+<div class="container py-2">
+
+    <div class="card bg-dark text-white">
+
+        <h5 class="card-header">Formulario de empleados</h5>
+        <div class="card-body px-3 py-3">
+            <form [formGroup]="formEmpleado">    
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Nombres</label>      
+                    <div class="col-sm-6">
+                        <input formControlName="nombre" [(ngModel)]="nuevoEmpleado.nombreEmpleado" type="text" class="form-control"/>
+                        <div *ngIf="formEmpleado.controls['nombre'].invalid && (formEmpleado.controls['nombre'].touched || formEmpleado.controls['nombre'].dirty)" class="error">
+                            <small *ngIf="formEmpleado.controls['nombre'].errors?.['required']">
+                              El campo es requerido
+                            </small>
+                            <small *ngIf="formEmpleado.controls['nombre'].errors?.['pattern']">
+                              El campo solo puede contener letras
+                            </small>
+                        </div> 
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Apellidos</label>
+                    <div class="col-sm-6">
+                        <input formControlName="apellido" [(ngModel)]="nuevoEmpleado.apellidosEmpleado" type="text" class="form-control"/>
+                        <div *ngIf="formEmpleado.controls['apellido'].invalid && (formEmpleado.controls['apellido'].touched || formEmpleado.controls['apellido'].dirty)" class="error">
+                            <small *ngIf="formEmpleado.controls['apellido'].errors?.['required']">
+                              El campo es requerido
+                            </small>
+                            <small *ngIf="formEmpleado.controls['apellido'].errors?.['pattern']">
+                              El campo solo puede contener letras
+                            </small>
+                        </div>  
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Telefono</label>
+                    <div class="col-sm-6">
+                        <input formControlName="telefono" maxlength="9" [(ngModel)]="nuevoEmpleado.telefonoEmpleado" type="text" class="form-control"/>
+                        <div *ngIf="formEmpleado.controls['telefono'].invalid && (formEmpleado.controls['telefono'].touched || formEmpleado.controls['telefono'].dirty)" class="error">
+                            <small *ngIf="formEmpleado.controls['telefono'].errors?.['required']">
+                              El campo es requerido
+                            </small>
+                            <small *ngIf="formEmpleado.controls['telefono'].errors?.['pattern'] || formEmpleado.controls['telefono'].errors?.['minlength']">
+                                El campo debe tener 9 dígitos y solo se permite números
+                             </small>
+                        </div> 
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Direcci&oacute;n</label>
+                    <div class="col-sm-6">
+                        <input formControlName="direccion" maxlength="80"[(ngModel)]="nuevoEmpleado.direccionEmpleado" type="text" class="form-control"/>
+                        <div *ngIf="formEmpleado.controls['direccion'].invalid && (formEmpleado.controls['direccion'].touched || formEmpleado.controls['direccion'].dirty)" class="error">
+                            <small *ngIf="formEmpleado.controls['direccion'].errors?.['required']">
+                                El campo es requerido
+                            </small>
+                        </div> 
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Correo</label>
+                    <div class="col-sm-6">
+                        <input formControlName="correo" [(ngModel)]="nuevoEmpleado.correoEmpleado" type="text" class="form-control"/>
+                        <div *ngIf="formEmpleado.controls['correo'].invalid && (formEmpleado.controls['correo'].touched || formEmpleado.controls['correo'].dirty)" class="error">
+                            <small *ngIf="formEmpleado.controls['correo'].errors?.['required']">
+                                El campo es requerido
+                            </small>
+                            <small *ngIf="formEmpleado.controls['correo'].errors?.['pattern']">
+                                El campo solo admite tipo correo
+                             </small>
+                        </div>  
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Codigo</label>
+                    <div class="col-sm-6">
+                        <input formControlName="codigo" maxlength="5" [(ngModel)]="nuevoEmpleado.codigoEmpleado" type="text" class="form-control"/>
+                        <div *ngIf="formEmpleado.controls['codigo'].invalid && (formEmpleado.controls['codigo'].touched || formEmpleado.controls['codigo'].dirty)" class="error">
+                            <small *ngIf="formEmpleado.controls['codigo'].errors?.['required']">
+                                El campo es requerido
+                            </small>
+                            <small *ngIf="formEmpleado.controls['codigo'].errors?.['minlength']">
+                                El campo debe tener 5 dígitos
+                             </small>
+                        </div>   
+                    </div>
+                </div>
+                <div class="form-group row mb-3 form_crear">
+                    <div class="col-sm-6">  
+                        <input (click)="enviarNuevoEmpleado()" type="submit" value="Crear empleado" class="btn btn-secondary"/>
+                    </div>
+                </div>
+            </form>
+           
+        </div>
+    </div>
+</div>
+

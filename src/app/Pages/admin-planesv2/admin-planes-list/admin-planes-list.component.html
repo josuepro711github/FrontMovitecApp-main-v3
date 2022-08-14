@@ -1,0 +1,42 @@
+<div class="container py-2">
+    <div class="card bg-light">
+      <h5 class="card-header">Listado de Planes</h5>
+  
+      <div class="card-body">
+  
+        <div class="card-title">
+          <a routerLink="../planes-add" class="btn btn-primary me-3">AGREGAR</a>
+        </div>
+  
+        <table class="table table-striped t_font mt-3 table-hover">
+          <thead class="table table-dark">
+            <tr>
+              <th class="id">Id</th>
+              <th>Precio</th>
+              <th>Velocidad</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of planes; index as i">
+              <td class="id">{{ item.id }}</td>
+              <td>{{ item.velocidad }}</td>
+              <td>{{ item.precio }}</td>
+              <td>
+                <a (click)="loadPlan(i)" routerLink="../planes-edit" class="btn btn-primary btn-sm"
+                  ><i class="fa-solid fa-pen-to-square col text-center"></i
+                ></a>
+              </td>
+              <td>
+                <a (click)="showModalEliminar(item.id)" class="btn btn-danger btn-sm"
+                  ><i class="fa-solid fa-trash"></i
+                ></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

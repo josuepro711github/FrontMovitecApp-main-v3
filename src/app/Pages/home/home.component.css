@@ -1,0 +1,269 @@
+main{
+    display: block;
+    font-family: "Montserrat", sans-serif ;
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: rgb(220, 228, 228);
+}
+
+.contenedor{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/** CODIGO PARA LOS PLANES **/
+.titulo_planes h1{
+    color: dodgerblue;
+    text-align: center;
+    font-size: 47px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 2.3rem;
+}
+
+.layout {
+    max-width: 90%; 
+    margin-left: 180px;  
+}
+
+.layout__planes{
+    display: grid;
+    grid-template-columns: 1fr;    
+    padding-bottom: 4rem;
+}
+
+@media(min-width:992px){
+    .layout {
+        width: 100%;  
+        display: grid;        
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding-top: 1.8rem;        
+      }
+ }
+
+ .grow1, .grow2, .grow3{ 
+    flex-grow: 1; 
+    border: none;
+    border-radius: 36px;    
+    color: #fff;
+    text-align: center;
+    margin-left: 0px;  
+    width: 26.1rem;
+    padding-bottom: 1.2rem; 
+}
+
+.grow1{
+    background-color: rgb(68, 206, 248);
+}
+
+.grow2 {     
+    background-color: rgb(7, 139, 201);  
+}
+
+.grow3 {     
+    background-color: rgb(35, 69, 216);
+}
+
+h1,h2,h3,h4{
+    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 6px;
+}
+
+.grow1 h1, .grow2 h1, .grow3 h1{        
+    font-size: 3.2rem;
+}
+
+.grow1 h2, .grow2 h2, .grow3 h2{  
+    font-size: 2.7rem;      
+    padding-bottom: 25px;
+    margin-top: 15px;
+}
+
+.grow1 h3, .grow2 h3, .grow3 h3{        
+    padding-bottom: 1.7rem;
+    margin-bottom: 1rem;
+    font-size: 31px;
+}
+
+.grow1 h4, .grow2 h4, .grow3 h4{
+    padding-bottom: 25px;
+    font-size: 28px;
+}
+
+.grow1 input, .grow2 input, .grow3 input{
+    padding: 7px 28px;
+    background-color: rgb(42, 199, 173);
+    color: #fff;
+    border-radius: 10px;
+    border: none;   
+    margin-right: 20px;
+}
+    
+.grow1 input:hover,
+.grow2 input:hover,
+.grow3 input:hover{
+    size: 100%;
+    background-color: rgb(20, 145, 93);
+}
+
+.grow1 .imgrow1,.grow2 .imgrow1,.grow3 .imgrow1{
+    width: 35px;
+}
+
+.btn__planes{
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.home,.negocio,.company{
+    width: 9rem;
+    height: 9rem;
+    padding-left: 0rem;
+    padding-bottom: 1rem;
+}
+
+
+/** CODIGO PARA BENEFICIOS **/
+.beneficios__Titulo h1{
+    text-align: center;
+    font-size: 47px;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 4rem;
+}
+
+.beneficios_container{   
+    display: table-cell;
+    gap: 2rem;
+    margin-left: 95px;  
+}
+
+.beneficios{
+    display: flexbox;
+    padding-left: 2.5rem;
+    padding-right: 5rem;
+}
+
+@media(min-width:768px){
+    .beneficios_container{
+        display:grid;
+        grid-template-columns:repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+
+    .beneficios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);     
+    }
+}
+
+.beneficio1{
+    border: none;
+    background-color: white;
+    border-radius: 2.5rem;
+    text-align: center;
+    color: rgb(0, 102, 255);
+    width: 17rem;
+    height: 20rem;
+    margin-top:1rem;
+    margin-left: 1.2rem;
+}
+
+.beneficio1 h2{
+    padding-bottom: 2rem;
+    font-size: 2.3rem;
+    line-height: 1.1;
+}
+
+.beneficio1 h3{
+    font-size: 1.2rem;
+}
+
+.beneficio__img{
+    width: 87%;
+}
+
+.beneficio1__img{
+    width: 40%;    
+    align-items: center;
+    padding-top: 0.7rem;
+}
+    
+.beneficio2__img{
+    width: 40%;    
+    align-items: center;
+    padding-top: 0rem;
+}
+
+.beneficio3__img{
+    width: 40%;    
+    align-items: center;
+    padding-top: 0.7rem;
+}
+
+
+/** CODIGO PARA COBERTURA **/
+@media(min-width:768px){
+    .cobertura__titulo h1{
+        text-align: center;
+        font-size: 3.6rem;
+        padding: 4rem 0;
+    }
+    
+    .cobertura__main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        padding-left: 13rem;
+    }
+     
+    .cobertura__imagen img{
+        width: 36rem;
+    }
+}
+
+.cobertura__titulo h1{
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.cobertura__main{
+    display: grid;
+}
+
+.cobertura__maps iframe{
+    margin-right: 250px;
+}
+
+/** busca tu distrito **/
+@media(min-width:768px){
+    .main-distrito{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        padding-left: 13rem;
+        padding-bottom: 3rem;
+        padding-top: 3.5rem;
+    }
+
+    .distrito-titulo h1{
+        font-size: 3.6rem;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.select{
+    width: 70%;
+    height: 3rem;
+    font-size: 1.8rem;
+}
+
+.select option{
+    font-size: 1.3rem;
+}
+
+.main-distrito select{
+    margin-top: 12px;
+}

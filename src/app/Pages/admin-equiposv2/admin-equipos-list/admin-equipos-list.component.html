@@ -1,0 +1,43 @@
+<div class="container py-2">
+    <div class="card bg-light">
+      <h5 class="card-header">Listado de Equipos</h5>
+  
+      <div class="card-body">
+  
+        <div class="card-title">
+          <a routerLink="../equipos-add" class="btn btn-primary me-3">AGREGAR</a>
+        </div>
+  
+        <table class="table table-striped t_font mt-3 table-hover">
+          <thead class="table table-dark">
+            <tr>
+              <th class="id">Id</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of equipos; index as i"> 
+              <td class="id">{{ item.idEquipo }}</td>
+              <td>{{ item.marcaEquipo }}</td>
+              <td>{{ item.modeloEquipo }}</td>
+              <td>
+                <a (click)="loadEquipo(i)" routerLink="../equipos-edit" class="btn btn-primary btn-sm"
+                  ><i class="fa-solid fa-pen-to-square col text-center"></i>
+                </a> 
+              </td>
+              <td>
+                <a (click)="showModalEliminar(item.idEquipo)" class="btn btn-danger btn-sm"
+                  ><i class="fa-solid fa-trash"></i
+                ></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+

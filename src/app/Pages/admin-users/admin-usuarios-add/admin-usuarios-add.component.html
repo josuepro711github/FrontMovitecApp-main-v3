@@ -1,0 +1,92 @@
+<ul class="alert alert-danger list_errors" *ngIf="bandera">
+    <li *ngFor="let err of errores">
+        {{ err }}
+    </li>
+</ul>
+
+<div class="container py-2">
+
+    <div class="card bg-dark text-white">
+
+        <h5 class="card-header">Formulario del cliente</h5>
+        <div class="card-body px-3 py-3">
+            <form #usuarioForm="ngForm" (submit)="enviarNuevoUsuario()">    
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Nombre</label>
+                    <div class="col-sm-6">
+                        <input name="nombre" [(ngModel)]="nuevoUsuario.nombre" type="text" class="form-control"/> 
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Apellido</label>
+                    <div class="col-sm-6">
+                        <input name="apellidos" [(ngModel)]="nuevoUsuario.apellidos" type="text" class="form-control"/> 
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Username</label>
+                    <div class="col-sm-6">
+                        <input name="usuario" [(ngModel)]="nuevoUsuario.nombreUsuario" type="text" class="form-control" #username="ngModel"/>
+                        <p class="alert alert-danger" *ngIf="bandera">
+                            {{ error_user }}
+                        </p>
+                    </div>          
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-6">
+                        <input name="contraseña" [(ngModel)]="nuevoUsuario.password" type="text" class="form-control" #password="ngModel"/>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Correo</label>
+                    <div class="col-sm-6">
+                        <input name="email" [(ngModel)]="nuevoUsuario.email" type="email" class="form-control"  #email="ngModel" /> 
+                        <p class="alert alert-danger" *ngIf="bandera">
+                            {{ error_email }}
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Tel&eacute;fono</label>
+                    <div class="col-sm-6">
+                        <input name="telefono" [(ngModel)]="nuevoUsuario.telefono" type="text" class="form-control" #telefono="ngModel" />
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Direcci&oacute;n</label>
+                    <div class="col-sm-6">
+                        <input name="direccion" [(ngModel)]="nuevoUsuario.direccion" type="text" class="form-control" #direccion="ngModel"/>
+                    </div>
+                </div>         
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Tipo Documento</label>
+                    <div class="col-sm-6">
+                        <select name="documento" id="documento" [(ngModel)]="nuevoUsuario.tipoDocumento.id">
+                            <option value="1">DNI</option>
+                            <option value="2">Pasaporte de extranjer&iacute;a</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Nro Documento</label>
+                    <div class="col-sm-6">
+                        <input name="documento" [(ngModel)]="nuevoUsuario.documento" type="text" class="form-control" #documento="ngModel"/>
+                    </div>
+                </div>  
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Estado</label>
+                    <div class="col-sm-6">
+                        <input name="activo" [(ngModel)]="nuevoUsuario.estado" type="checkbox" class="form-control form-check form-check-input"/>
+                    </div>
+                </div>
+                <div class="form-group row mb-3 form_crear">
+                    <div class="col-sm-6">  
+                        <input type="submit" [disabled]="!usuarioForm.form.valid" value="Crear cliente" class="btn btn-secondary"/>
+                    </div>
+                </div>
+            </form>
+           
+        </div>
+    </div>
+</div>

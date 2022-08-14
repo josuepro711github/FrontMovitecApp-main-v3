@@ -1,0 +1,21 @@
+<header>
+    <nav>
+        <div> 
+            <img src="../../../assets/img/logo2.png" alt="" class="logo">
+        </div>
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="bar-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="nav-menu">
+            <li *ngIf="!isLogin"><a routerLink="../home" class="active">Inicio</a></li>
+            <li *ngIf="!isLogin"><a routerLink="../planes" class="active">Planes</a></li>
+            <li *ngIf="!isLogin"><a routerLink="../acerca-de-nosotros" class="active">Acerca de Nosotros</a></li>
+            <li *ngIf="!isLogin"><a routerLink="../contact" class="active">Contacto</a></li>
+            <li *ngIf="!isLogin"><a routerLink="../loginv2" class="active">Login</a></li>
+            <li class="nav-item cerrar" *ngIf="isLogin"><a routerLink="public/login" (click)="cerrarSesion()"> CERRAR SESI&Oacute;N</a></li>
+        </ul>
+        
+    </nav>       
+           
+</header>

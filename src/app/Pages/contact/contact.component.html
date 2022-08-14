@@ -1,0 +1,140 @@
+<app-headerv2></app-headerv2>
+<!-- code josueDev -->
+<main>
+  <section class="form-container">
+    <h1>Contacta con nuestro equipo para tus dudas o necesidades</h1>
+    <div class="form">
+      <form [formGroup]="formContacto" >
+        <input class="form-item"
+               type="text"
+               placeholder="Nombre"
+               [(ngModel)]="contacto.nombre"
+               formControlName="nombre" />
+              <div *ngIf="formContacto.controls['nombre'].invalid && (formContacto.controls['nombre'].touched || formContacto.controls['nombre'].dirty)" class="error">
+                <p *ngIf="formContacto.controls['nombre'].errors?.['required']">
+                  El campo es requerido
+                </p>
+                <p *ngIf="formContacto.controls['nombre'].errors?.['pattern']">
+                  El campo solo puede contener letras
+                </p>
+              </div>
+        <input class="form-item"
+               type="text"
+               placeholder="Apellido"
+               [(ngModel)]="contacto.apellidos" 
+               formControlName="apellido">
+               <div *ngIf="formContacto.controls['apellido'].invalid && (formContacto.controls['apellido'].touched || formContacto.controls['apellido'].dirty)" class="error">
+                <p *ngIf="formContacto.controls['apellido'].errors?.['required']">
+                   El campo es requerido
+                </p>
+                <p *ngIf="formContacto.controls['apellido'].errors?.['pattern']">
+                  El campo solo puede contener letras
+               </p>
+              </div>       
+
+        <select class="form-item"
+                [(ngModel)]="contacto.documento" 
+                formControlName="documento">
+          <option value="DNI">DNI</option>
+          <option value="Carnet de Extranjería">Carnet de Extranjería</option>
+        </select>
+        <div *ngIf="formContacto.controls['documento'].invalid && (formContacto.controls['documento'].touched)" class="error">
+          <p *ngIf="formContacto.controls['documento'].errors?.['required']">
+             El campo es requerido
+          </p>
+        </div> 
+
+        <input class="form-item"
+               type="text"
+               maxlength="15"
+               placeholder="N&uacute;mero de documento"
+               [(ngModel)]="contacto.numero_documento" 
+               formControlName="numeroDoc">
+               <div *ngIf="formContacto.controls['numeroDoc'].invalid && (formContacto.controls['numeroDoc'].touched || formContacto.controls['numeroDoc'].dirty)" class="error">
+                <p *ngIf="formContacto.controls['numeroDoc'].errors?.['required']">
+                   El campo es requerido
+                </p>
+                <p *ngIf="formContacto.controls['numeroDoc'].errors?.['pattern'] || formContacto.controls['numeroDoc'].errors?.['minlength']">
+                  El campo debe tener mínimo 8 dígitos y solo se permite números
+               </p>
+              </div>
+
+        <input class="form-item"
+               type="email"
+               placeholder="Correo"
+               [(ngModel)]="contacto.correo" 
+               formControlName="correo">
+               <div *ngIf="formContacto.controls['correo'].invalid && (formContacto.controls['correo'].touched || formContacto.controls['correo'].dirty)" class="error">
+                <p *ngIf="formContacto.controls['correo'].errors?.['required']">
+                   El campo es requerido
+                </p>
+                <p *ngIf="formContacto.controls['correo'].errors?.['pattern']">
+                  El campo solo admite tipo correo
+               </p>
+              </div>
+
+        <input class="form-item"
+               type="text"
+               maxlength="9"
+               placeholder="Tel&eacute;fono o celular"
+               [(ngModel)]="contacto.telefono" 
+               formControlName="celular">
+               <div *ngIf="formContacto.controls['celular'].invalid && (formContacto.controls['celular'].touched || formContacto.controls['celular'].dirty)" class="error">
+                <p *ngIf="formContacto.controls['celular'].errors?.['required']">
+                   El campo es requerido
+                </p>
+                <p *ngIf="formContacto.controls['celular'].errors?.['pattern'] || formContacto.controls['celular'].errors?.['minlength']">
+                  El campo debe tener 9 dígitos y solo se permite números
+               </p>
+              </div>
+
+        <textarea rows="5"
+                  placeholder="Escriba su mensaje aqu&iacute;"
+                  maxlength="500"
+                  [(ngModel)]="contacto.mensaje" 
+                  formControlName="mensaje"></textarea>
+                  <div *ngIf="formContacto.controls['mensaje'].invalid && (formContacto.controls['mensaje'].touched)" class="error">
+                    <p *ngIf="formContacto.controls['mensaje'].errors?.['required']">
+                       El campo es requerido
+                    </p>
+                  </div>
+
+        <label for="check"><input type="checkbox" 
+                                  id="check"
+                                  formControlName="condiciones"
+                                  >He leído y aceptado las <a href="#">Condiciones del Tratamiento de Datos Personales</a></label>
+
+        <ngx-recaptcha2 class="mb-3" #captchaElem
+          formControlName="recaptcha"
+          [siteKey]="siteKey">    
+        </ngx-recaptcha2> 
+
+        <button type="submit" (click)="onSubmit()">ENVIAR</button>
+      </form>
+    </div>
+  </section>
+
+  
+
+  <section class="info-container">
+    <article class="info1">
+      <h1>ATENCI&Oacute;N AL CLIENTE</h1>
+      <P><i class="fa-solid fa-phone"></i>Central:
+        (+51) 99 999 9999</P>
+      <P><i class="fa-solid fa-envelope"></i>Escríbenos:
+        contacto@movitec.pe </P>
+    </article>
+    <article class="info2">
+      <h1>INFORMACI&Oacute;N COMERCIAL</h1>
+      <P><i class="fa-solid fa-phone"></i>Ventas:
+        (511) 999 9999</P>
+      <P><i class="fa-solid fa-envelope"></i>Escríbenos:
+        contacto@movitec.pe</P>
+    </article>
+    <article class="info3">
+      <h1>NUESTRA OFICINA</h1>
+      <P><i class="fa-solid fa-building"></i>SAN ISIDRO
+        Av. San Martin de Porres</P>
+    </article>
+  </section>
+</main>

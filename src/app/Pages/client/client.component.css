@@ -1,0 +1,14 @@
+.container-client{
+    display: flex;
+    background-color: #eee;
+}
+
+.menu-client{
+    width: 13%;
+    background: #34495E;
+}
+
+.body-client{
+    width: 75%;
+    margin: 20px;
+}

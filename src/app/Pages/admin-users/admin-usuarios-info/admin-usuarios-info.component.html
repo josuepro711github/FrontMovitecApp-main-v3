@@ -1,0 +1,46 @@
+<div class="container py-4">
+    <div class="card bg-light">
+        <div class="card-header"><b>Instalaci&oacute;n del cliente</b></div>
+        <div class="card-body">
+            <h4 class="card-title">
+                <a class="btn btn-light btn-xs" routerLink="usuariosv2">&laquo; volver</a>
+            </h4>
+                <div class="items" *ngFor="let item of instalaciones">
+					<ul class="list-group my-2" >
+						<li class="list-group-item list-group-item-dark"><b>Datos del cliente <i class="fa-solid fa-user"></i></b></li>
+						<li class="list-group-item"><b>Nombre: </b>{{item.usuario.nombre}}</li>
+						<li class="list-group-item"><b>Email: </b>{{item.usuario.email}}</li>
+						<li class="list-group-item"><b>Documento: </b>{{item.usuario.documento}}</li>
+					</ul>
+					<ul class="list-group my-2">
+						<li class="list-group-item list-group-item-primary"><b>Datos del empleado <i class="fa-solid fa-toolbox"></i></b></li>
+						<li class="list-group-item"><b>Nombre: </b>{{item.empleado.nombre}}</li>
+						<li class="list-group-item"><b>Apellidos: </b>{{item.empleado.apellidos}}</li>
+						<li class="list-group-item"><b>Tel&eacute;fono: </b>{{item.empleado.telefono}}</li>
+						<li class="list-group-item"><b>Direcci&oacute;n: </b>{{item.empleado.direccion}}</li>
+						<li class="list-group-item"><b>Email: </b>{{item.empleado.correo}}</li>
+						<li class="list-group-item"><b>C&oacute;digo: </b>{{item.empleado.codigo}}</li>
+					</ul>
+					<ul class="list-group my-2">
+						<li class="list-group-item list-group-item-danger"><b>Equipo <i class="fa-solid fa-desktop"></i></b></li>
+						<li class="list-group-item"><b>Marca: </b>{{item.equipo.marca}}</li>
+						<li class="list-group-item"><b>Modelo: </b>{{item.equipo.modelo}}</li>
+						<li class="list-group-item"><b>Serie: </b>{{item.serie}}</li>
+					</ul>
+					<ul class="list-group my-2">
+						<li class="list-group-item list-group-item-warning"><b>Plan <i class="fa-solid fa-wifi"></i></b></li>
+						<li class="list-group-item"><b>Velocidad: </b>{{item.plan.velocidad}}</li>
+						<li class="list-group-item"><b>Precio: </b>{{item.plan.precio}}</li>
+					</ul>
+					<ul class="list-group my-2">
+						<li class="list-group-item list-group-item-info"><b>Fecha <i class="fa-solid fa-calendar"></i></b></li>
+						<li class="list-group-item">{{item.fecha}}</li>
+					</ul>
+					<ul class="list-group my-2">
+						<li class="list-group-item list-group-item-success"><b>Direcci&oacute;n <i class="fa-solid fa-location-dot"></i></b></li>
+						<li class="list-group-item">{{item.direccion}}</li>
+					</ul>   
+            </div>        
+        </div>
+    </div>
+</div>

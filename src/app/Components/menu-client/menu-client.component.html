@@ -1,0 +1,21 @@
+<section class="menu-client">
+    <ul class="menu-lista-item">
+        <div class="usuario">
+            <img src="../../../assets/img/usuario2.png" alt="">
+            <h2>{{usuario.nombre}} {{usuario.apellidos}}</h2>
+        </div>
+        <li class="menu-item-subtitle">Menú</li>
+        <div class="inicio">
+            <li class="menu-item"><i class="fa-solid fa-house-chimney icon"></i><a routerLink="inicio">Inicio</a></li>
+        </div>
+        <div class="mis_recibos">
+            <li class="menu-item"><i class="fa-solid fa-file icon"></i><a routerLink="recibo">Mis Recibos</a></li>
+        </div>
+        <div class="utilidades">
+            <li class="menu-item"><i class="fa-solid fa-folder icon"></i><a style="cursor: pointer;">Utilidades</a></li>
+        </div>
+        <div class="salir">
+            <li class="menu-item" *ngIf="isLogin"><i class="fa-solid fa-door-closed icon"></i><a (click)="cerrarSesion()" class="pointer">Salir</a></li>
+        </div>      
+    </ul>   
+</section>

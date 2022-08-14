@@ -1,0 +1,56 @@
+<div class="container py-2">
+  <div class="card bg-light main">
+    <h5 class="card-header">Listado de Clientes</h5>
+
+    <div class="card-body">
+
+      <div class="card-title">
+        <a routerLink="../usuarios-add" class="btn btn-primary me-3">AGREGAR</a>
+        <a class="btn btn-success" (click)="enviarCorreo()">ENVIAR CORREO</a>
+      </div>
+
+      <table class="table table-striped t_font mt-3 table-hover">
+        <thead class="table table-dark">
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Username</th>
+            <th>Correo</th>
+            <th>Estado</th>
+            <th>Tipo Doc</th>
+            <th>Nro</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody class="letra">
+          <tr *ngFor="let item of usuarios; index as i">
+            <td data-titulo="id:">
+              <a (click)="detailUser(i)" routerLink="../usuarios-info" class="btn btn-info btn-xs">{{
+                item.id
+              }}</a>
+            </td>
+            <td data-titulo="nombre:"> {{ item.nombre }}</td>
+            <td data-titulo="apellido:">{{ item.apellidos }}</td>
+            <td data-titulo="usuario:">{{ item.nombre_Usuario }}</td>
+            <td data-titulo="correo:">{{ item.correo }}</td>
+            <td data-titulo="estado:">{{ item.estado ? "Activo" : "Inactivo" }}</td>
+            <td data-titulo="tipo:">{{ item.tipo }}</td>
+            <td data-titulo="documento:">{{ item.documento }}</td>
+              <td>
+                <a (click)="loadUsuario(i)" routerLink="../usuarios-edit" class="btn btn-primary btn-sm"
+                  ><i class="fa-solid fa-pen-to-square col text-center"></i
+                ></a>
+              </td>
+              <td>
+                <a (click)="showModalEliminar(item.id)" class="btn btn-danger btn-sm"
+                  ><i class="fa-solid fa-trash"></i
+                ></a>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

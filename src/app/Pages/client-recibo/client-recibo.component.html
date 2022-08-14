@@ -1,0 +1,26 @@
+<main class="contenedor">
+    <div class="recibos-container">
+        <div class="bg-recibos"></div>
+        <div class="contenido">
+            <h1 class="titulo">Mis Recibos</h1>
+            <div class="puntos">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="contrato">
+        <div class="seleccione">Seleccione un contrato</div>
+        <div class="info">Movitec 10 Mbps, SECTOR 1 GRUPO 3 MZ H LTE 12, VILLA EL SALVADOR</div>
+    </div>
+    <div *ngFor="let item of recibos" class="recibo">
+        <div (click)="descargarPdf()" class="mes">
+            <i class="fa fa-download"></i>
+            <div>Julio 2022</div>  
+        </div>
+        <div class="estado">PAGADO</div>
+        <div class="vencimiento">Vencimiento: 28/07/2022</div>
+        <div class="monto">S/ 99.00</div>
+    </div>
+</main>

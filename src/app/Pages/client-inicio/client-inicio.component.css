@@ -1,0 +1,142 @@
+.container{
+    width: 113%;
+}
+
+.contain{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.menu-item{
+    flex-basis: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    margin: 30px 0;
+    flex-direction: column;
+}
+
+.uno{
+    background-color: #607D8B;
+    font-family: "Roboto", sans-serif;
+}
+
+.dos{
+    background-color: #2196F3;
+}
+
+.tres{
+    background-color: #00BCD8;
+    height: 150px;
+}
+
+.cuatro{
+    background-color: #673AB7;
+    height: 150px;
+}
+
+.cuatro >:nth-child(1){
+    align-self: flex-start;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.cuatro >:nth-child(2){
+    font-size: 25px;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-left: 15px;
+    margin-top: 3px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+.cuatro >:nth-child(4){
+    align-self: flex-end;
+    text-decoration: none;
+}
+
+hr{
+    width: 90%;
+    border: solid 1px black;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+p{
+    color: rgba(255,255,255,.7);
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    position: relative;
+    margin: 0 0 2px;
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+    margin-right: 20px;
+    color: white;
+    margin-top: 8px;
+}
+
+a i{
+    font-size: 14px;
+    color: white;
+}i{
+    font-size: 24px;
+}
+
+
+.tres >:nth-child(1){
+    align-self: flex-start;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.tres >:nth-child(2){
+    font-size: 25px;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-left: 15px;
+    margin-top: 3px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+.tres >:nth-child(4){
+    align-self: flex-end;
+    text-decoration: none;
+}
+
+
+.dos >:nth-child(1){
+    align-self: flex-start;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.dos >:nth-child(2){
+    align-self: flex-start;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+.uno >:nth-child(1){
+    align-self: flex-start;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.uno >:nth-child(2){
+    align-self: flex-start;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+.cero{
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    display: inline;
+}
